@@ -12,6 +12,7 @@ from bokeh.models.glyphs import Text
 from scipy import ndimage
 
 from nanoleaf.nanoleaf.aurora import Aurora
+from nanoleaf.nanoleaf import setup
 
 class AuroraWrapper(Aurora):
     def __init__(self, config):
