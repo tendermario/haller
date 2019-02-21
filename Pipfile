@@ -7,10 +7,10 @@ name = "pypi"
 
 [packages]
 bokeh = "*"
-pyaudio = "*"
 numpy = "*"
 scipy = "*"
 requests = "*"
+pyaudio = "*"
 
 [requires]
 python_version = "3.7"
