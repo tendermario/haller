@@ -13,11 +13,19 @@ Haller is a wrapper around https://github.com/bharat/nanoleaf that provides some
 
 ### Requirements
 1. Python3
-1. Python modules: bokeh, pyaudio, numpy, scipy
+1. Python modules: bokeh, pyaudio, numpy, scipy, maybe some other python dev tools
+
+## First time setup
+
+1. `brew install pipenv`
+1. `cd haller` (or whatever you name the dir)
+1. `pipenv shell`
+1. `pipenv run pip install pip==18.0` (maybe)
+1. `pipenv install`
+1. `git clone git@github.com:bharat/nanoleaf.git` inside the haller directory
 
 ## Quick start
-1. `git clone git@github.com:bharat/nanoleaf.git` inside the haller directory
-1. `pip3 install bokeh pyaudio numpy scipy`
+
 1. Hit the pairing button on your Aurora
 1. run `config.py`. It will discover your Aurora, pair with it and create a file called `aurora.ini` containing config data.
 
