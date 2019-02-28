@@ -13,7 +13,7 @@ Haller is a wrapper around https://github.com/bharat/nanoleaf that provides some
 
 ### Requirements
 1. Python3
-1. Python modules: bokeh, pyaudio, numpy, scipy, maybe some other python dev tools
+1. Python modules: bokeh, pyaudio, numpy, scipy, (maybe some other python dev tools?)
 
 ## First time setup
 
@@ -23,6 +23,7 @@ Haller is a wrapper around https://github.com/bharat/nanoleaf that provides some
 1. `pipenv run pip install pip==18.0` (maybe)
 1. `pipenv install`
 1. `git clone git@github.com:bharat/nanoleaf.git` inside the haller directory
+
 
 ## Quick start
 
