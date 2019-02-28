@@ -5,7 +5,7 @@ import argparse
 import bokeh
 
 import config
-from nanoleaf.nanoleaf.nanoleaf import Aurora
+from nanoleaf.nanoleaf import Aurora
 
 def effect_scripted():
     palette = [ {
