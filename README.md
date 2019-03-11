@@ -46,6 +46,17 @@ Here's what a sample plot looks like:
 1. `effect.py --set <name>` to choose an effect
 1. `effect.py --create` creates a hardcoded effect called `Scripted`. Work in progress here.
 
+#### Effects - A deeper learning
+
+##### For rhythm, add this to the object for now:
+
+```
+"animType" : "plugin",
+"pluginType": "rhythm",
+"pluginUuid":"60333927-cc36-4a5a-a682-9bd114de8bff",
+```
+
+
 ### Streaming
 
 This uses the `External Control` feature of Aurora to allow dynamic effects. There are a few hardcoded ones, but the code is an example for what you can do. Try `display.py --streaming wipe` to see one of them.

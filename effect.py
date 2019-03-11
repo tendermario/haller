@@ -17,7 +17,9 @@ def effect_scripted():
     return {
         "command" : "add",
         "animName" : "Scripted",
-        "animType" : "explode",
+        "animType" : "plugin",
+        "pluginType": "rhythm",
+        "pluginUuid":"60333927-cc36-4a5a-a682-9bd114de8bff",
         "colorType" : "HSB",
         "palette" : palette,
         "transTime" : { "maxValue": 50, "minValue": 50 },

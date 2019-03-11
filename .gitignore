@@ -3,3 +3,4 @@ nanoleaf
 __pycache__
 .vscode
 plot.html
+output.json
