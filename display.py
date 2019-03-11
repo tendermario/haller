@@ -159,18 +159,40 @@ def streaming_spread(a, args):
             time.sleep(.3)
         sequence.reverse()
 
-def streaming_epilepsy(a, args):
+def streaming_epilepsy_red(a, args):
     s = a.effect_stream()
+    randomDepth = random.randint(0, 20)
+    color = [255, randomDepth, randomDepth]
+
+    speed = .001
     panel_ids = [x['panelId'] for x in a.rotated_panel_positions]
     while True:
         for p in panel_ids:
-            s.panel_prepare(p, 255, 255, 255, transition_time = 0)
+            s.panel_prepare(p, color[0], color[1], color[2], transition_time = 0)
         s.panel_strobe()
-        time.sleep(.1)
+        time.sleep(speed)
         for p in panel_ids:
             s.panel_prepare(p, 0, 0, 0, transition_time = 0)
         s.panel_strobe()
-        time.sleep(.1)
+        time.sleep(speed)
+
+def streaming_epilepsy_bad(a, args):
+    s = a.effect_stream()
+    color = [255, 255, 255]
+    # color = [255, 0, 0]
+    # # randomDepth = random.randint(0, 20)
+
+    speed = .02
+    panel_ids = [x['panelId'] for x in a.rotated_panel_positions]
+    while True:
+        for p in panel_ids:
+            s.panel_prepare(p, color[0], color[1], color[2], transition_time = 0)
+        s.panel_strobe()
+        time.sleep(speed)
+        for p in panel_ids:
+            s.panel_prepare(p, 0, 0, 0, transition_time = 0)
+        s.panel_strobe()
+        time.sleep(speed)
 
 def streaming_mesmer(a, args):
     s = a.effect_stream()
@@ -330,8 +352,8 @@ def streaming_cylon(a, args):
     panels = a.rotated_panel_positions
     s = a.effect_stream()
 
-    red = (255, 0, 0)
-    black = (0, 0, 0)
+    red = (255, 0, 255)
+    black = (44, 0, 44)
     x = [x['x'] for x in panels]
 
     delta = 50
@@ -345,11 +367,11 @@ def streaming_cylon(a, args):
                 tt = 0
             else:
                 c = black
-                tt = 4
+                tt = 2
             s.panel_prepare(p['panelId'], c[0], c[1], c[2], transition_time=tt)
         s.panel_strobe()
         # Aurora can only handle 10 updates a second.
-        time.sleep(.05)
+        time.sleep(.02)
         band += delta
         if band > max_x or band < min_x - 4 * abs(delta):
             delta = -delta
