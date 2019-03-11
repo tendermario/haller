@@ -29,6 +29,9 @@ def effect_scripted():
         "loop" : True
     }
 
+def set_to_effect(effect):
+    a = config.aurora()
+    a.effect = effect
 
 def effect(a, args):
     if args.list:
