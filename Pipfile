@@ -11,6 +11,7 @@ numpy = "*"
 scipy = "*"
 requests = "*"
 pyaudio = "*"
+webcolors = "*"
 
 [requires]
 python_version = "3.7"
