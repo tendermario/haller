@@ -165,14 +165,15 @@ def streaming_epilepsy_red(a, args):
     color = [255, randomDepth, randomDepth]
 
     speed = .001
+    transitionTime = 0
     panel_ids = [x['panelId'] for x in a.rotated_panel_positions]
     while True:
         for p in panel_ids:
-            s.panel_prepare(p, color[0], color[1], color[2], transition_time = 0)
+            s.panel_prepare(p, color[0], color[1], color[2], transition_time = transitionTime)
         s.panel_strobe()
         time.sleep(speed)
         for p in panel_ids:
-            s.panel_prepare(p, 0, 0, 0, transition_time = 0)
+            s.panel_prepare(p, 0, 0, 0, transition_time = transitionTime)
         s.panel_strobe()
         time.sleep(speed)
 
