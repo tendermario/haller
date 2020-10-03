@@ -160,13 +160,16 @@ def streaming_spread(a, args):
         sequence.reverse()
 
 def streaming_epilepsy_red(a, args):
+    print("Effect start")
     s = a.effect_stream()
+    panels = a.rotated_panel_positions['positionData']
+    panel_ids = [x['panelId'] for x in panels]
+
     randomDepth = random.randint(0, 20)
     color = [255, randomDepth, randomDepth]
-
     speed = .001
     transitionTime = 0
-    panel_ids = [x['panelId'] for x in a.rotated_panel_positions]
+
     while True:
         for p in panel_ids:
             s.panel_prepare(p, color[0], color[1], color[2], transition_time = transitionTime)

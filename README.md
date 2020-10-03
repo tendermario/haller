@@ -47,6 +47,10 @@ Option 2: pipenv (I can't do this anymore for some reason)
 - Hard reset: Press and hold power + arrow for 10 seconds until flashing for hard reset to factory defaults and go into pair mode.
 - Pairing: Press and hold power for 5 seconds to go into pairing mode
 
+## Debugging notes:
+
+- I think nanoleaf.nanoleaf.aurora Aurora has its API changed, so methods like panel_prepare doesn't work in display.py --streaming red_epilepsy might want to pull the latest nanoleaf repo.
+
 ## How do I use it?
 
 ### Configure your panel orientation
