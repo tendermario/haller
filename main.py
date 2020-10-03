@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-from effect import set_to_effect
+from effect import set_to_effect, action_list
 
 class Main:
   file_path = './setlist'
@@ -23,16 +23,22 @@ class Main:
 
 def main():
   main_boi = Main()
-  print("Welcome to NANOLEAF. Please enter a command.")
-  print("(Note to self: enter what command to run here to list all commands)")
-  print("For now, look inside ./setlist")
+  print("Welcome to Nanoleaf CLI. Please enter a command.")
+  print("type 'list' to see all effects registered.")
+  print("type 'n' to play next effect from 'setlist' file.")
+  print("type 'q' to exit.")
 
   while True:
     command = input('> ')
 
     if command.lower() == 'n':
       main_boi.set_next_effect()
+    elif command.lower() == 'q' or command.lower() == 'quit' or command.lower() == 'exit':
+      exit()
+    elif command.lower() == 'list':
+      action_list()
     else:
+      print('Setting to %s' % command)
       set_to_effect(command)
 
 if __name__ == '__main__':

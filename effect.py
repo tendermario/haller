@@ -7,6 +7,8 @@ import bokeh
 import config
 from nanoleaf.nanoleaf import Aurora
 
+a = config.aurora()
+
 def effect_scripted():
     palette = [ {
         "hue": random.randint(0, 359),
@@ -19,7 +21,7 @@ def effect_scripted():
         "animName" : "Scripted",
         "animType" : "plugin",
         "pluginType": "rhythm",
-        "pluginUuid":"60333927-cc36-4a5a-a682-9bd114de8bff",
+        "pluginUuid": "60333927-cc36-4a5a-a682-9bd114de8bff",
         "colorType" : "HSB",
         "palette" : palette,
         "transTime" : { "maxValue": 50, "minValue": 50 },
@@ -30,21 +32,31 @@ def effect_scripted():
     }
 
 def set_to_effect(effect):
-    a = config.aurora()
+    type(effect)
     a.effect = effect
+
+def action_list():
+    print('\n'.join(a.effects_list))
+
+def action_set(name):
+    if name not in a.effects_list:
+        print('%s is an invalid effect\n' % name)
+    a.effect = name
+
+# This will save the contents of effect_scripted to a name.
+def action_save():
+    effect = effect_scripted()
+    a.effect_set_raw(effect)
 
 def effect(a, args):
     if args.list:
-        print('\n'.join(a.effects_list))
+        action_list()
 
     elif args.set:
-        if args.set not in a.effects_list:
-            print('%s is an invalid effect\n' % args.set)
-        a.effect = args.set
+        action_set(args.set)
 
     elif args.create:
-        effect = effect_scripted()
-        a.effect_set_raw(effect)
+        action_save()
 
 
 def main(argv=None):
