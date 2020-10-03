@@ -121,10 +121,11 @@ def rotate(a, args):
 
 def plot(a):
     panels = a.rotated_panel_positions
-    x = [x['x'] for x in panels]
-    y = [x['y'] for x in panels]
-    ids = [x['panelId'] for x in panels]
-    angles = [x['o'] for x in panels]
+    positions = panels['positionData']
+    x = [x['x'] for x in positions]
+    y = [x['y'] for x in positions]
+    ids = [x['panelId'] for x in positions]
+    angles = [x['o'] for x in positions]
 
     pad_x = (max(x) - min(x)) * .1
     pad_y = (max(y) - min(y)) * .1

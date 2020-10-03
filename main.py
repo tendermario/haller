@@ -23,6 +23,9 @@ class Main:
 
 def main():
   main_boi = Main()
+  print("Welcome to NANOLEAF. Please enter a command.")
+  print("(Note to self: enter what command to run here to list all commands)")
+  print("For now, look inside ./setlist")
 
   while True:
     command = input('> ')
