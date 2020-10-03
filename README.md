@@ -30,6 +30,11 @@ Haller is a wrapper around https://github.com/bharat/nanoleaf that provides some
 1. Hit the pairing button on your Aurora
 1. run `config.py`. It will discover your Aurora, pair with it and create a file called `aurora.ini` containing config data.
 
+## Notes on controls
+
+- Press and hold power + arrow for 10 seconds until flashing for hard reset to factory defaults and go into pair mode.
+- Press and hold power for 5 seconds to go into pairing mode
+
 ## How do I use it?
 
 ### Configure your panel orientation
