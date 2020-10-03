@@ -11,18 +11,30 @@ Haller is a wrapper around https://github.com/bharat/nanoleaf that provides some
 1. Real-time display effects (including some samples)
 1. Audio visualization effects (including some samples)
 
-### Requirements
+### Prerequisites
 1. Python3
-1. Python modules: bokeh, pyaudio, numpy, scipy, (maybe some other python dev tools?)
+1. This directory cloned
+1. The nanoleaf directory cloned into that directory
+
+```
+git clone git@github.com:tendermario/haller.git
+cd haller
+git clone git@github.com:bharat/nanoleaf.git
+```
 
 ## First time setup
+
+Option 1: venv
+
+1. `./install.sh`
+
+Option 2: pipenv (I can't do this anymore for some reason)
 
 1. `brew install pipenv`
 1. `cd haller` (or whatever you name the dir)
 1. `pipenv shell`
 1. `pipenv run pip install pip==18.0` (maybe)
 1. `pipenv install`
-1. `git clone git@github.com:bharat/nanoleaf.git` inside the haller directory
 
 
 ## Quick start
@@ -32,8 +44,8 @@ Haller is a wrapper around https://github.com/bharat/nanoleaf that provides some
 
 ## Notes on controls
 
-- Press and hold power + arrow for 10 seconds until flashing for hard reset to factory defaults and go into pair mode.
-- Press and hold power for 5 seconds to go into pairing mode
+- Hard reset: Press and hold power + arrow for 10 seconds until flashing for hard reset to factory defaults and go into pair mode.
+- Pairing: Press and hold power for 5 seconds to go into pairing mode
 
 ## How do I use it?
 
