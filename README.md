@@ -42,6 +42,8 @@ Option 2: pipenv (I can't do this anymore for some reason)
 1. Hit the pairing button on your Aurora
 1. run `config.py`. It will discover your Aurora, pair with it and create a file called `aurora.ini` containing config data.
 
+This will persist until you reset your Nanoleaf. You can have your phone and computer connected to the panels at the same time.
+
 ## Notes on controls
 
 - Hard reset: Press and hold power + arrow for 10 seconds until flashing for hard reset to factory defaults and go into pair mode.
@@ -50,8 +52,18 @@ Option 2: pipenv (I can't do this anymore for some reason)
 ## Debugging notes:
 
 - I think nanoleaf.nanoleaf.aurora Aurora has its API changed, so methods like panel_prepare doesn't work in display.py --streaming red_epilepsy might want to pull the latest nanoleaf repo.
+- Todo: Fix streaming
+- Todo: Make streaming accessible from the CLI
 
 ## How do I use it?
+
+Run `./main.py` to open the CLI. It will have instructions.
+
+Run `./display.py --streaming <name>` to use streaming mode, which will run against a preset algo defined as: `<name>_streaming` method in the file.
+
+## How do I use it? (original)
+
+NOTE: This is the original maintainer's notes, and a lot of it does not currently work.
 
 ### Configure your panel orientation
 By default your Aurora will have an arbitrary orientation. You can control that orientation by using the `--rotate` argument to `config.py`. Haller will save that orientation and use it in the future.
