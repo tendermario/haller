@@ -5,3 +5,4 @@ __pycache__
 plot.html
 output.json
 .venv
+*.pyc
