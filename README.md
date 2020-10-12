@@ -1,8 +1,8 @@
-# Haller
-Easy and cool effects and visualizations for your Nanoleaf Aurora.
+# Nanoleaf Aurora Controller
+Customize interactions. Make cool effects and visualizations for your Nanoleaf Aurora.
 
 ## What is it?
-Haller is a wrapper around https://github.com/bharat/nanoleaf that provides some additional, higher level functionality to control your Nanoleaf Aurora
+This is a fork of https://github.com/bharat/haller, which is a wrapper around https://github.com/bharat/nanoleaf that provides some additional, higher level functionality to control your Nanoleaf Aurora.
 
 ## What can it do?
 1. Automatically find and connect to your Aurora
