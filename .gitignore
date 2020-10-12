@@ -6,3 +6,4 @@ plot.html
 output.json
 .venv
 *.pyc
+nohup.out
