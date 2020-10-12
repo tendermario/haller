@@ -44,6 +44,18 @@ Option 2: pipenv (I can't do this anymore for some reason)
 
 This will persist until you reset your Nanoleaf. You can have your phone and computer connected to the panels at the same time.
 
+## Coming back
+
+Just turn on your panels and it should be good to go.
+
+## Test commands
+
+`./display.py --streaming flash --speed 0.1`
+`./display.py --streaming flash --speed 1`
+`./display.py --streaming flash --speed 0.3`
+(seizure warning): `./display.py --streaming flash --speed 0.1`
+(seizure warning): `./display.py --streaming flash --speed 0.01`
+
 ## Notes on controls
 
 - Hard reset: Press and hold power + arrow for 10 seconds until flashing for hard reset to factory defaults and go into pair mode.
