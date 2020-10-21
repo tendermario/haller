@@ -12,6 +12,10 @@ from random import randint, choice
 RED = [255, 0, 0]
 GREEN = [0, 255, 0]
 BLUE = [0, 0, 255]
+ORANGE = [255, 127, 0]
+YELLOW = [0, 255, 255]
+INDIGO = [75, 0, 130]
+VIOLET = [143, 0, 255]
 
 def streaming_rain(a, args):
     panel_ids = [x['panelId'] for x in a.rotated_panel_positions]
@@ -163,7 +167,40 @@ def streaming_spread(a, args):
             time.sleep(.3)
         sequence.reverse()
 
+# This is shitty
+def streaming_rainbow(a, args):
+    colors = [RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET, RED, ORANGE]
+    stream = a.effect_stream()
+    panels = a.rotated_panel_positions['positionData']
+    panel_ids = [x['panelId'] for x in panels]
 
+    randomDepth = random.randint(0, 20)
+    speed = float(args.speed) or 0.4
+    transitionTime = 0
+    i = 0
+    while i < 100000:
+        i += 1
+        index = i % 9
+        stream.panel_set(panel_ids[index], colors[index][0], colors[index][1], colors[index][2], transition_time = transitionTime)
+        time.sleep(speed)
+
+# Sorta panel identification...
+def streaming_flashme(a, args):
+    colors = [RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET, RED, ORANGE]
+    stream = a.effect_stream()
+    panels = a.rotated_panel_positions['positionData']
+    panel_ids = [x['panelId'] for x in panels]
+    flashme = 0 # change this from 0-8
+
+    randomDepth = random.randint(0, 20)
+    speed = float(args.speed) or 0.4
+    transitionTime = 0
+    i = 0
+    while i < 100000:
+        i += 1
+        index = i % 9
+        stream.panel_set(panel_ids[flashme], colors[index][0], colors[index][1], colors[index][2], transition_time = transitionTime)
+        time.sleep(speed)
 
 def streaming_flash(a, args):
     stream = a.effect_stream()
